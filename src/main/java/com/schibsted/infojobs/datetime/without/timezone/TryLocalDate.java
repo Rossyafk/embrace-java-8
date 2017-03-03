@@ -22,8 +22,6 @@ import static java.time.temporal.TemporalAdjusters.previous;
 public class TryLocalDate {
 
     public static void main(String[] args) {
-
-
         int year = Year.now().getValue();
         int month = Month.MARCH.getValue();
         int dayOfMonth = 3;
