@@ -1,4 +1,4 @@
-package com.schibsted.infojobs.datetime.without.timezone;
+package com.schibsted.infojobs.examples.datetime.without.timezone;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

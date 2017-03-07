@@ -1,4 +1,4 @@
-package com.schibsted.infojobs.datetime;
+package com.schibsted.infojobs.examples.datetime;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
