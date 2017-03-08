@@ -6,17 +6,22 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toList;
+
 public class Exercise03 {
 
+    private static final String ONE = "One";
+    private static final String TWO = "Two";
+    private static final String THREE = "Three";
+
     public static List<String> beforeJava8() {
-
-        //Collections.unmodifiableList()
-
-        return Arrays.asList("One", "Two", "Three");
+        List<String> stringList = Arrays.asList(ONE, TWO, THREE);
+        return Collections.unmodifiableList(stringList);
     }
 
     public static List<String> withJava8() {
-        return Stream.of("One", "Two", "Three")
-                .collect(Collectors.toList());
+        return Stream.of(ONE, TWO, THREE)
+                .collect(collectingAndThen(toList(), Collections::unmodifiableList));
     }
 }

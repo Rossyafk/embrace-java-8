@@ -17,6 +17,6 @@ public class Exercise02 {
 
     public static String[] withJava8() {
         return Stream.of(ONE, TWO, THREE)
-                .toArray(size -> new String[size]);
+                .toArray(String[]::new);
     }
 }
