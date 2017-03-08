@@ -33,6 +33,20 @@ public class Candidate {
     }
 
     @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof  Candidate) {
+            Candidate candidate = (Candidate) obj;
+            return id.equals(candidate.id);
+        }
+        return false;
+    }
+
+    @Override
     public String toString() {
         return "Candidate{" +
                 "id='" + id + '\'' +
