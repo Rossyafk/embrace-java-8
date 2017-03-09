@@ -1,4 +1,4 @@
-package com.schibsted.infojobs.datetime.with.timezone;
+package com.schibsted.infojobs.examples.datetime.with.timezone;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

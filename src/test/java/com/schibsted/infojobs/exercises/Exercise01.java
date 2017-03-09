@@ -1,9 +1,13 @@
 package com.schibsted.infojobs.exercises;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Exercise01 {
 
@@ -18,5 +22,10 @@ public class Exercise01 {
     public static List<String> withJava8() {
         return Stream.of(ONE, TWO, THREE)
                 .collect(Collectors.toList());
+    }
+
+    @Test
+    public void exercise01() throws Exception {
+        assertThat(withJava8()).isEqualTo(beforeJava8());
     }
 }

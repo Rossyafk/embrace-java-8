@@ -1,8 +1,12 @@
 package com.schibsted.infojobs.exercises;
 
+import org.junit.Test;
+
 import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Exercise04 {
 
@@ -21,5 +25,10 @@ public class Exercise04 {
     public static HashSet<String> withJava8() {
         return Stream.of(ONE, TWO, THREE)
                 .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Test
+    public void exercise04() throws Exception {
+        assertThat(withJava8()).isEqualTo(beforeJava8());
     }
 }
